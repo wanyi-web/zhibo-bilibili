@@ -1,0 +1,307 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    background-color: #000;
+}
+
+* {
+ 
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  -webkit-touch-callout:none;
+      -webkit-user-select:none;
+      -khtml-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none;
+ }
+
+/*video默认全屏按钮*/
+/* video::-webkit-media-controls-fullscreen-button{ display: none !important; } */
+
+/*video默认aduio音量按钮*/
+/* video::-webkit-media-controls-mute-button { display: none !important;} */
+
+/*video默认setting按钮*/
+/* video::-internal-media-controls-overflow-button{ display: none !important;} */
+
+/*腾讯云点播禁用firefox全屏、设置按钮*/
+/* .trump-button[sub-component="fullscreen_btn"],.trump-button[now="fullscreen"]{ display:none!important;}
+.trump-button[sub-component="setting"]{ display:none !important;} */
+
+/* video::--webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none !important;
+} */
+
+/*禁用video的controls（要慎重！不要轻易隐藏掉，会导致点击视频不能播放）*/
+/* video::-webkit-media-controls {
+  display: none !important;
+} */
+/*进度条*/
+video::-webkit-media-controls-timeline {
+    display: none;
+  }
+  /*音量控制条*/
+  /* video::-webkit-media-controls-volume-slider {
+    display: none;            
+  } */
+
+  #wrap {
+      width: 100%;
+      height: 100%;
+      /* background: url(../images/bg.jpg);
+      background-size: contain;
+      background-repeat: no-repeat; */
+      overflow: hidden;
+  }
+
+  .page1 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 10rem;
+    height: 17.786667rem;
+    pointer-events:none;
+  }
+
+  .logoDiv {
+    width: 10rem;
+    height: 2rem; /*150px*/
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* position: absolute; */
+    /* z-index: 99; */
+  }
+
+  .logo {
+    width: 2.053333rem; /*154px*/
+    height: .866667rem;
+    margin-left: .666667rem;
+    position: absolute;
+    pointer-events:none;
+    /* z-index: 99; */
+  }
+
+  .firstpage {
+    width: 10rem;
+    height: 4rem; /*600px*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: pink; */
+  }
+
+  .character {
+    width: 8.226667rem;
+    height: 3.066667rem;
+    animation: beat 0.3s alternate linear infinite;
+    pointer-events:none;
+    /* background-color: #000; */
+  }
+
+  /* .page2 {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-image: url(../images/bj.png);
+    background-size: 100% 100%;
+  } */
+
+  /* .mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  } */
+
+  .page2 {
+    width: 100%;
+    height: 100%;
+    /* background: url(../images/bg.jpg) no-repeat;
+    background-size: contain; */
+  }
+
+  .app {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #my-video {
+    object-fit: contain;
+    object-position: center center;
+    background: url(../images/bg.jpg) no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+
+  .di {
+    width: 10rem;
+    height: 17.786667rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+  /* .page3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.7);
+  } */
+
+  .page3 {
+    width: 10rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-color: rgb(0, 0, 0, 0.7);
+  }
+
+  .touxiang {
+    width: 10rem;
+    height: 9.733333rem;  /*730px*/
+    position: absolute;
+    top: 1.2rem;  /*90px*/
+    left: 50%;
+    transform: translate(-50%,0);
+    /* background-color: #fff; */
+  }
+  
+  .txImg {
+    position: absolute;
+    top: 1.133333rem; /*85px*/
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 3.2rem;
+    height: 4.08rem;
+    pointer-events:none;
+  }
+  
+  .aixin {
+    width: 5.986667rem;
+    height: 5.24rem;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 2.62rem);
+    animation: dong 0.5s ease-in infinite;
+    pointer-events:none;
+  }
+  
+  @keyframes dong {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .name {
+    position: absolute;
+    top: 6.08rem;  /*456px*/
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 7.72rem;
+    height: .8rem;
+    pointer-events:none;
+  }
+
+  .but {
+    width: 10rem;
+    height: 4.306667rem; /*323px*/
+    position: absolute;
+    top: 9.733333rem; /*730px*/ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: pink; */
+  }
+
+  .down {
+    width: 4.533333rem;
+    height: 1.853333rem;
+    animation: beat 0.5s alternate linear infinite;
+  }
+
+  /* #down {
+    width: 4.786667rem;
+    height: 1.306667rem;
+    animation: swing 0.5s alternate linear infinite;
+  } */
+  
+  @keyframes beat {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  .hand {
+    width: 1.546667rem;
+    height: 1.68rem;
+    position: absolute;
+    top: 10.666667rem; /*850px*/
+    right: 1.546667rem; /*116px*/
+    animation: beat 0.5s alternate linear infinite;
+    pointer-events:none;
+  }
+
+  @keyframes swing {
+    20% {
+      transform: rotate3d(0, 0, 1, 5deg);
+    }
+  
+    40% {
+      transform: rotate3d(0, 0, 1, -5deg);
+    }
+  
+    60% {
+      transform: rotate3d(0, 0, 1, 5deg);
+    }
+  
+    80% {
+      transform: rotate3d(0, 0, 1, -5deg);
+    }
+  
+    to {
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+  }
+  
+  .swing {
+    transform-origin: center center;
+    animation: swing 1s infinite;
+  }
